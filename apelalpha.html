@@ -7,7 +7,7 @@
 		<meta name="keywords" content="">
 		<title>Apel Asset Limited</title>
 		<!-- Favicon -->
-		<link href="assets/images/favicon.png" rel="shortcut icon">
+		<link href="assets/images/favicon2.png" rel="shortcut icon">
 		<!-- CSS -->
 		<link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
@@ -18,6 +18,77 @@
 		<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 		<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
 	</head>
+	<style>
+	
+	
+	.faq-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	
+	h1 {
+		text-align: center;
+		color: #333;
+		margin-bottom: 20px;
+	}
+	
+	.accordion-wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+	
+	.accordion-column {
+		flex: 1;
+	}
+	
+	.accordion-item {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	
+	.accordion-title {
+		background-color: #107d5f;
+		color: white;
+		padding: 15px;
+		cursor: pointer;
+		border: none;
+		width: 100%;
+		text-align: left;
+		outline: none;
+		transition: background-color 0.2s ease;
+	}
+	
+	.accordion-title:hover {
+		background-color: #5ae35c;
+	}
+	
+	.accordion-title.active {
+		background-color: #107d5f;
+	}
+	
+	.accordion-content {
+		padding: 15px;
+		background-color: #f9f9f9;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+	
+	.accordion-content p {
+		margin: 0;
+		color: #333;
+	}
+	
+	@media (max-width: 768px) {
+		.accordion-wrapper {
+			flex-direction: column;
+		}
+	}
+</style>	
 	<body class="theme-light" data-preloader="true">
 
 		<!-- Header -->
@@ -31,55 +102,53 @@
 				<div class="header-menu">
 					<ul class="nav">
 						<li class="nav-item">
-							<a href="#" class="nav-link">Home</a>
+							<a href="index.html" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Our Services</a>
-							<ul class="nav-dropdown">
+							<a href="services.html" class="nav-link">Our Services</a>
+							<!-- <ul class="nav-dropdown">
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 1</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 2</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 3</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 4</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 5</a></li>
-							</ul>
+							</ul> -->
 						</li>
-
-
 						<li class="nav-item">
-							<a href="#" class="nav-link">News</a>
-							<ul class="nav-dropdown">
+							<a href="apelalpha.html" class="nav-link" style="background-color: #107d5f ; color: #ffffff;">Apel Alpha</a>
+							<!-- <ul class="nav-dropdown">
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 1</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 2</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 3</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 4</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 5</a></li>
-							</ul>
+							</ul> -->
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Apel Alpha</a>
+							<a href="#" class="nav-link">Resources</a>
 							<ul class="nav-dropdown">
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 1</a>
-									<ul class="nav-subdropdown">
+								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">News</a>
+									<!-- <ul class="nav-subdropdown">
 										<li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item 1</a></li>
 										<li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item 2</a></li>
-									</ul>
+									</ul> -->
 								</li>
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 1</a>
-									<ul class="nav-subdropdown">
+								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Media</a>
+									<!-- <ul class="nav-subdropdown">
 										<li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item 1</a></li>
 										<li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item 2</a></li>
-									</ul>
+									</ul> -->
 								</li>
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item 1</a>
-									<ul class="nav-subdropdown">
+								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Market Activities</a>
+									<!-- <ul class="nav-subdropdown">
 										<li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item 1</a></li>
 										<li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item 2</a></li>
-									</ul>
+									</ul> -->
 								</li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Contact Us</a>
+							<a href="contact-us.html" class="nav-link">Contact Us</a>
 						</li>
 					</ul>
 					<!-- Mobile Menu Close button -->
@@ -87,6 +156,9 @@
 						<i class="bi bi-x-lg"></i>
 					</button>
 				</div>
+
+
+
 				<!-- Mobile Menu Toggle -->
 				<button class="menu-toggle">
 					Menu
@@ -106,8 +178,8 @@
 						<div>
 							<h6 class="hero-text">
 								<span style="font-size: 43px;">TRADE STOCKS WITH EASE</span>
-								<span class="stroke-text" style="font-size: 38px;">Enjoy Convinient Trading</span>
-									<span class="stroke-text" style="font-size: 38px; "> on Apel Alpha</span>
+								<span class="" style="font-size: 38px;">Enjoy Convinient Trading</span>
+									<span class="" style="font-size: 38px; "> on Apel Alpha</span>
 							</h6>
 							<div class="row g-4 mt-md-1 mt-lg-2">
 								<div class="col-12 col-md">
@@ -197,146 +269,23 @@
 		<!-- end Clients section -->
 
 		<!-- Services section -->
-		<div class="section-lg pt-0">
-			<div class="container">
-				<div class="row g-4 g-xxl-5 icon-3xl">
-					<!-- Services box 1 -->
-					<div class="col-12 col-lg-6">
-						<div class="order-box">
-							<div class="order">
-								<h2 class="display-4 fw-semi-bold stroke-text">01</h2>
-							</div>
-							<div>
-								<i class="bi bi-gear mb-2"></i>
-								<h3>Service Title</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non tempore earum molestiae corrupti</p>
-							</div>
-						</div>
-					</div>
-					<!-- Services box 2 -->
-					<div class="col-12 col-lg-6">
-						<div class="order-box">
-							<div class="order">
-								<h2 class="display-4 fw-semi-bold stroke-text">02</h2>
-							</div>
-							<div>
-								<i class="bi bi-gear mb-2"></i>
-								<h3>Service Title</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non tempore earum molestiae corrupti</p>
-							</div>
-						</div>
-					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</div>
+		
 		<!-- end Services section -->
 
 		<!-- Portfolio section -->
-		<div class="section-box">
-			<div class="section bg-lighter border-radius-1">
-				<div class="container">
-					<div class="row">
-						<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-							<h6 class="title-heading">Portfolio</h6>
-							<h2 class="display-3 fw-medium">Recent Projects</h2>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem obcaecati, placeat nemo natus deleniti iusto labore quod quisquam quasi iure dolore architecto maxime beatae</p>
-							<!-- Slider Navigation -->
-							<div class="mt-4">
-								<div class="button-circle button-circle-lg swiper-portfolio-prev">
-									<i class="bi bi-arrow-left"></i>
-								</div>
-								<div class="button-circle button-circle-lg swiper-portfolio-next">
-									<i class="bi bi-arrow-right"></i>
-								</div>
-							</div>
-						</div>
-					</div><!-- end row -->
-					<div class="swiper portfolio-slider mt-4 mt-lg-5">
-						<div class="swiper-wrapper">
+		<div class="section-box d-flex justify-content-center" >
+			<div class="section bg-lighter border-radius-1 d-flex align-items-center" style=" width: 90%; display: flex; height:37vw;">
 							<!-- Slider Item 1 -->
-							<div class="swiper-slide">
-								<div class="portfolio-box">
-									<!-- Image -->
-									<div class="portfolio-img">
-										<a href="#">
-											<img src="assets/images/col-2.jpg" alt="">
-										</a>
-									</div>
-									<div class="pt-4">
-										<!-- Categories -->
-										<ul class="list-inline-dot sm-heading mb-2">
-											<li>
-												<a class="link-hover" href="#">Category</a>
-											</li>
-											<li>
-												<a class="link-hover" href="#">Category</a>
-											</li>
-										</ul>
-										<!-- Caption -->
-										<h2>
-											<a class="link-hover-2" href="#">
-												Project Title Here
-											</a>
-										</h2>
-									</div>
-								</div><!-- end portfolio-box -->
-							</div>
-							<!-- Slider Item 2 -->
-							<div class="swiper-slide">
-								<div class="portfolio-box">
-									<!-- Image -->
-									<div class="portfolio-img">
-										<a href="#">
-											<img src="assets/images/col-2.jpg" alt="">
-										</a>
-									</div>
-									<div class="pt-4">
-										<!-- Categories -->
-										<ul class="list-inline-dot sm-heading mb-2">
-											<li>
-												<a class="link-hover" href="#">Category</a>
-											</li>
-											<li>
-												<a class="link-hover" href="#">Category</a>
-											</li>
-										</ul>
-										<!-- Caption -->
-										<h2>
-											<a class="link-hover-2" href="#">
-												Project Title Here
-											</a>
-										</h2>
-									</div>
-								</div><!-- end portfolio-box -->
-							</div>
+							
+							<video autoplay muted loop controls style="width:85vw;  height: 70vw;">
+								<source src="assets/images/Introducing Apel Alpha.mp4" type="video/mp4" >
+						
+							</video>
+						
 							<!-- Slider Item 3 -->
-							<div class="swiper-slide">
-								<div class="portfolio-box">
-									<!-- Image -->
-									<div class="portfolio-img">
-										<a href="#">
-											<img src="assets/images/col-2.jpg" alt="">
-										</a>
-									</div>
-									<div class="pt-4">
-										<!-- Categories -->
-										<ul class="list-inline-dot sm-heading mb-2">
-											<li>
-												<a class="link-hover" href="#">Category</a>
-											</li>
-											<li>
-												<a class="link-hover" href="#">Category</a>
-											</li>
-										</ul>
-										<!-- Caption -->
-										<h2>
-											<a class="link-hover-2" href="#">
-												Project Title Here
-											</a>
-										</h2>
-									</div>
-								</div><!-- end portfolio-box -->
-							</div>
+						
+							<!-- end portfolio-box -->
+						
 							<!-- end Slider Item 3 -->
 						</div><!-- end swiper-wrapper -->
 					</div><!-- end portfolio-slider -->
@@ -449,64 +398,7 @@
 		<!-- end Pricing section -->
 
 		<!-- About section -->
-		<div class="section-box">
-			<div class="section bg-lighter border-radius-1">
-				<div class="container">
-					<div class="row g-5 align-items-center">
-						<div class="col-12 col-lg-6">
-							<div class="row">
-								<div class="col-6 text-end">
-									<img class="img-mask-2" src="assets/images/col-3-square.jpg" alt="">
-									<div class="d-flex align-items-center justify-content-end mt-3">
-										<div class="d-inline-block pe-2">
-											<h4 class="line-height-100 fw-normal mb-0">+</h4>
-											<p class="sm-heading">Fact Title</p>
-										</div>
-										<div class="d-inline-block">
-											<h1 class="fw-semi-bold stroke-text display-4 letter-spacing-1"><span class="counter">34</span></h1>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="d-flex align-items-center mb-3">
-										<div class="d-inline-block">
-											<h1 class="fw-semi-bold stroke-text display-4 letter-spacing-1"><span class="counter">12</span></h1>
-										</div>
-										<div class="d-inline-block ps-2">
-											<h4 class="line-height-100 fw-normal mb-0">+</h4>
-											<p class="sm-heading">Fact Title</p>
-										</div>
-									</div>
-									<img class="img-mask-2" src="assets/images/col-3-square.jpg" alt="">
-								</div>
-							</div><!-- end row(inner) -->
-						</div>
-						<div class="col-12 col-lg-6">
-							<h6 class="title-heading mb-3">About Us</h6>
-							<h2 class="display-6 fw-normal mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing</h2>
-							<div class="row g-4 mb-4">
-								<div class="col-12 col-md-6">
-									<div class="progress-box">
-										<h6 class="sm-heading">Progress bar</h6>
-										<div class="animated-progress">
-											<div data-progress="94"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-md-6">
-									<div class="progress-box">
-										<h6 class="sm-heading">Progress bar</h6>
-										<div class="animated-progress">
-											<div data-progress="90"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum maiores necessitatibus deleniti dolore, enim inventore</p>
-							<a class="button button-lg mt-4" href="#">Learn More</a>
-						</div>
-					</div><!-- end row -->
-				</div><!-- end container -->
+	<!-- end container -->
 			</div>
 		</div>
 		<!-- end About section -->
@@ -518,7 +410,7 @@
 					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						<h6 class="title-heading">Team Members</h6>
 						<h2 class="display-3 fw-medium">Meet Our Team</h2>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem obcaecati, placeat nemo natus deleniti iusto labore quod quisquam quasi iure dolore architecto maxime beatae</p>
+						<p>At Apel Asset Limited, we believe that our people are at the heart of everything we do. Get to know the passionate professionals who bring their expertise and creativity to every project.</p>
 					</div>
 				</div><!-- end row -->
 				<div class="row g-4 g-xxl-5 mt-4">
@@ -587,65 +479,7 @@
 			</div><!-- end container -->
 		</div>
 		<!-- end Team section -->
-
-		<!-- Testimonial section -->
-		<div class="section-lg pt-0">
-			<div class="container">
-				<div class="swiper testimonial-slider">
-					<div class="swiper-wrapper">
-						<!-- Slider item 1 -->
-						<div class="swiper-slide">
-							<div class="testimonial-box">
-								<div class="testimonial-content">
-									<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati placeat delectus, impedit nemo aliquid voluptatum repellendus</p>
-									<div class="mt-4">
-										<h3>Christina Gray</h3>
-										<span class="sm-heading">CTO - Company</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Slider item 2 -->
-						<div class="swiper-slide">
-							<div class="testimonial-box">
-								<div class="testimonial-content">
-									<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati placeat delectus, impedit nemo aliquid voluptatum repellendus</p>
-									<div class="mt-4">
-										<h3>Christina Gray</h3>
-										<span class="sm-heading">CTO - Company</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Slider item 3 -->
-						<div class="swiper-slide">
-							<div class="testimonial-box">
-								<div class="testimonial-content">
-									<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati placeat delectus, impedit nemo aliquid voluptatum repellendus</p>
-									<div class="mt-4">
-										<h3>Christina Gray</h3>
-										<span class="sm-heading">CTO - Company</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Slider Pagination -->
-					<div class="swiper-testimonial-pagination"></div>
-					<!-- Slider Nav -->
-					<!--<div class="testimonial-nav">
-						<div class="swiper-testimonial-prev button-circle">
-							<i class="bi bi-arrow-left"></i>
-						</div>
-						<div class="swiper-testimonial-next button-circle">
-							<i class="bi bi-arrow-right"></i>
-						</div>
-					</div>-->
-				</div>
-			</div><!-- end container -->
-		</div>
-		<!-- end Testimonial section -->
-
+	
 		<!-- Footer -->
 		<footer>
             <div class="section-box">
@@ -653,18 +487,36 @@
                     <div class="container">
                         <div class="row g-4 g-lg-5">
                             <div class="col-12 col-lg-4">
-                                <h2 class="uppercase letter-spacing-1">Sana</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo sit facilis cum nisi magnam</p>
-                            </div>
+								<h6 class="uppercase letter-spacing-1">Social Networks</h6>
+								
+								<!-- Social Network Icons -->
+								<div class="social-icons d-flex ">
+									<a href="https://www.facebook.com" target="_blank" class="me-3">
+										<i class="bi bi-facebook" style="font-size: 24px;"></i>
+									</a>
+									<a href="https://x.com/apelng" target="_blank" class="me-3">
+										<i class="bi bi-twitter" style="font-size: 24px;"></i>
+									</a>
+									<a href="https://www.linkedin.com/company/apelng/" target="_blank" class="me-3">
+										<i class="bi bi-linkedin" style="font-size: 24px;"></i>
+									</a>
+									
+										<a href="https://www.instagram.com/apelng" target="_blank" class="me-3">
+										<i class="bi bi-instagram" style="font-size: 24px;"></i>
+									</a>
+								</div>
+							</div>
+							
                             <div class="col-12 col-md-6 col-lg-4">
                                 <h6 class="sm-heading">Email:</h6>
-                                <h3>contact@example.com</h3>
-                                <p>Mon-Fri 9am-5pm</p>
+                                <h5>customercare@apelasset.com</h5>
+                                <p>Mon-Fri 9am-4pm</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
-                                <h6 class="sm-heading">Phone:</h6>
-                                <h3>+123 456 7890</h3>
-                                <p>Call or WhatsApp</p>
+                               
+							   <h6>CALL <a href="https://wa.me/09048844011" target="_blank">OR WHATSAPP</a> </h6>
+                                <h4>+234 90 4884 4011</h4>
+                                
                             </div>
                         </div><!-- end row -->
                     </div><!-- end container -->
@@ -674,12 +526,12 @@
                 <div class="container">
                     <div class="row g-2">
                         <div class="col-12 col-md-6 text-center text-md-start">
-                            <p>&copy; 2023 FlaTheme, All Rights Reserved.</p>
+                            <p>&copy; All rights reserved © Copyright Apel Asset Limited</p>
                         </div>
                         <div class="col-12 col-md-6 text-center text-md-end">
                             <ul class="list-inline-dot">
                                 <li><a class="link-hover" href="#">About us</a></li>
-                                <li><a class="link-hover" href="#">Pricing</a></li>
+                                <li><a class="link-hover" href="#">Apel Alpha</a></li>
                                 <li><a class="link-hover" href="#">Contact</a></li>
                             </ul>
                         </div>
@@ -708,6 +560,22 @@
 		<!-- end Background Vertical lines -->
 
 		<!-- JavaScripts -->
+		<script>
+			const accordionItems = document.querySelectorAll('.accordion-title');
+			
+			accordionItems.forEach(item => {
+				item.addEventListener('click', () => {
+					item.classList.toggle('active');
+					const content = item.nextElementSibling;
+					
+					if (item.classList.contains('active')) {
+						content.style.maxHeight = content.scrollHeight + 'px';
+					} else {
+						content.style.maxHeight = 0;
+					}
+				});
+			});
+		</script>
 		<script src="assets/plugins/jquery.min.js"></script>
 		<script src="assets/plugins/plugins.js"></script>
 		<script src="assets/js/functions.js"></script>
