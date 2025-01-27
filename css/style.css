@@ -3065,3 +3065,37 @@ body {
       width: 50%;
   }
 }
+
+
+#map1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto; /* Center the map */
+  border-radius: 10px; /* Rounded corners */
+  border-top: 5px ; /* Top border */
+  border-bottom: 5px; /* Bottom border */
+  overflow: hidden; /* Ensure radius applies to iframe content */
+  width: 80%; /* Adjust width as necessary */
+  max-width: 1000px; /* Limit the maximum width */
+  background-color: #f9f9f9; /* Optional background color for contrast */
+}
+
+#map1 iframe {
+  border: none; /* Remove iframe border */
+  width: 100%; /* Ensure iframe spans container width */
+  height: 420px; /* Fixed height */
+  border-radius: inherit; /* Inherit container radius */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #map1 {
+      width: 95%; /* Reduce width for smaller screens */
+  }
+
+  #map1 iframe {
+      height: 300px; /* Adjust height for mobile devices */
+  }
+}
+
