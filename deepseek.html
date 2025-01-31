@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treasure Hunt Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+    }
+    .game-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Treasure Hunt Game</h1>
+    <div class="message" id="message">Welcome to the Treasure Hunt! Choose your path.</div>
+    <button onclick="choosePath('cave')">Go to the Dark Cave</button>
+    <button onclick="choosePath('chamber')">Go to the Golden Chamber</button>
+    <button onclick="searchRoom()">Search the Room</button>
+  </div>
+
+  <script>
+    let hasKey = false;
+    let treasureFound = false;
+
+    function choosePath(path) {
+      const message = document.getElementById('message');
+      if (path === 'cave') {
+        message.textContent = 'You enter the Dark Cave. It\'s damp and eerie.';
+      } else if (path === 'chamber') {
+        if (hasKey) {
+          message.textContent = 'You unlock the treasure chest and find gold! You win!';
+          treasureFound = true;
+        } else {
+          message.textContent = 'The treasure chest is locked. You need a key!';
+        }
+      }
+      checkGameOver();
+    }
+
+    function searchRoom() {
+      const message = document.getElementById('message');
+      if (!hasKey) {
+        message.textContent = 'You find a rusty key! This might unlock something.';
+        hasKey = true;
+      } else {
+        message.textContent = 'You find nothing of interest.';
+      }
+    }
+
+    function checkGameOver() {
+      if (treasureFound) {
+        setTimeout(() => {
+          alert('Congratulations! You found the treasure!');
+          resetGame();
+        }, 100);
+      }
+    }
+
+    function resetGame() {
+      hasKey = false;
+      treasureFound = false;
+      document.getElementById('message').textContent = 'Welcome to the Treasure Hunt! Choose your path.';
+    }
+  </script>
+</body>
+</html>

@@ -24,12 +24,171 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 
     <!-- Favicon -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 </head>
+<style>
+    .mil-banner2-container {
+        position: relative;
+        overflow: hidden;
+        min-height: 600px; /* Default height for desktop */
+     
+    }
+    
+    .mil-banner2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        visibility: hidden;
+        padding: 60px 0;
 
+        
+    }
+    
+    .mil-banner2.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .mil-navigation-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.mil-navigation-dots .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 8px;
+    background-color: rgba(105, 104, 104, 0.932);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mil-navigation-dots .dot.active {
+    background-color: #8abf42;
+    transform: scale(1.3);
+}
+
+.mil-navigation-dots .dot:hover {
+    transform: scale(1.2);
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+    /* Responsive Image */
+    .mil-banner2-img img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    /* Mobile Navigation Dots */
+    @media (max-width: 992px) {
+        .mil-navigation-dots {
+            bottom: 20px;
+        }
+        
+        .mil-navigation-dots .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 6px;
+        }
+        
+        .mil-banner2-container {
+            min-height: 500px; /* Reduced height for tablets */
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .mil-banner2 {
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 75px;
+            height: 93vh;
+        }
+        
+        .mil-banner2-text {
+            padding-top: 40px !important;
+        }
+        
+        .mil-banner2-img {
+            margin-top: 30px;
+        }
+        
+        .mil-display {
+            font-size: 2.5rem !important;
+            line-height: 1.2;
+        }
+        
+        .mil-display2 {
+            font-size: 2rem !important;
+        }
+        
+        .mil-banner2-container { 
+            min-height: auto;
+            padding-bottom: 80px;
+            
+        }
+        
+            }
+    
+    
+    @media (max-width: 480px) {
+        .mil-display {
+            font-size: 2rem !important;
+        }
+        
+        .mil-display2 {
+            font-size: 1.8rem !important;
+        }
+        
+        .mil-banner2 {
+            padding: 30px 0;
+        }
+        
+        .mil-navigation-dots {
+            bottom: 15px;
+        }
+    }
+    
+    /* Second Slide Background Image Adjustment */
+    .mil-banner2:nth-child(2) {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Ensure vertical centering on mobile */
+    .row.align-items-center {
+        align-items: flex-start !important;
+    }
+    
+    @media (min-width: 768px) {
+        .row.align-items-center {
+            align-items: center !important;
+        }
+    }
+    </style>
 <body>
 
 
@@ -68,7 +227,7 @@
                             <a href="services.html">Services</a>
                         </li>
                         <li >
-                            <a>Trade Stocks</a>
+                            <a href="apelalpha.html">Trade Stocks</a>
                         
                         <li>
                             <a href="research.html">Research</a>
@@ -81,7 +240,7 @@
                     </ul>
                 </nav>
                 <div class="mil-menu-buttons">
-                    <a href="register.html" class="mil-btn mil-sm">Log in</a>
+                    <a href="https://www.apelalpha.com/IW" class="mil-btn mil-sm" target="_blank">Log in</a>
                     <div class="mil-menu-btn">
                         <span></span>
                     </div>
@@ -103,7 +262,7 @@
                                     <!-- <h6 class="mil-text-gradient-2 mil-mb-20">Enjoy Convenient Trading on Apel Alpha</h6> -->
                                     <h1 class="mil-display mil-text-gradient-3 mil-mb-60">Trade Stocks with Ease</h1>
                                     <div class="mil-buttons-frame">
-                                        <a href="register.html" class="mil-btn mil-md mil-add-arrow">Get Started</a>
+                                        <a href="https://www.apelalpha.com/IW" class="mil-btn mil-md mil-add-arrow">Get Started</a>
                                        
                                     </div>
                                 </div>
@@ -122,11 +281,11 @@
                         <div class="row align-items-center" style="height: 100%;">
                             <div class="col-xl-6 col-lg-6 col-md-12 offset-xl-3 offset-lg-3 offset-md-0">
                                 <div class="mil-banner2-text" style="padding-top: 100px;"> <!-- Adjust padding to move content down -->
-                                    <h6 class="mil-text-gradient-2 mil-mb-20b" style="color: #fff;">Trade stocks with Apel Alpha</h6>
-                                    <h2 class="mil-display2 mil-text-gradient-3 mil-mb-60" ><p class="mil-display2">Enjoy seamless</p> trading with<p class="mil-display2">Apel Investsmart!</p> </h2>
+                                    <h6 class="mil-text-gradient-2 mil-mb-20b" style="color: #fff;"></h6>
+                                    <h2 class="mil-display2 mil-text-gradient-3 mil-mb-60" ><p class="mil-display2" style=" margin-top: 40px; color:#fff;">Enjoy seamless  </p><p class="mil-display2" style="color: #8abf42;"></p><p class="mil-display2" style=" color:#fff;">trading with</p> <p class="mil-display2" style="color: #8abf42;">Apel Investsmart!</p> </h2>
                                     <div class="mil-buttons-frame">
-                                        <a href="register.html" class="mil-btn mil-md mil-add-arrow">Get Started</a>
-                                        <a href="https://www.youtube.com/watch?v=gRhoYxy9Oss" class="mil-btn mil-md mil-light mil-add-play has-popup-video">Learn More</a>
+                                        <a href="https://www.apelapp.com/" class="mil-btn mil-md mil-add-arrow">Get Started</a>
+                                        <a class="mil-btn mil-md mil-light video-btn "  onclick="openVideo()">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -144,6 +303,19 @@
                 </div>
             </div>
 
+
+
+
+            <div class="video-modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeVideo()">&times;</span>
+                    <video id="localVideo" controls>
+                        <source src="img/investsmart.mp4" type="video/mp4">
+                        <source src="videos/my-video.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
             <!-- banner end -->
 
             <!-- brands -->
@@ -338,7 +510,7 @@
             <!-- icon boxes end -->
 
             <!-- call to action -->
-            <div class="mil-cta mil-up">
+            <!-- <div class="mil-cta mil-up">
                 <div class="container">
                     <div class="mil-out-frame mil-p-160-100">
                         <div class="row align-items-end">
@@ -374,7 +546,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- call to action end -->
 
             <!-- features -->
@@ -564,13 +736,27 @@
             <!-- call to action end -->
 
             <!-- footer -->
-            <footer >
+            <footer class="mil-footer-with-bg mil-p-160-0">
                 <div class="container">
                     <div class="row" >
                         <div class="col-xl-3" >
-                            <a href="#." class="mil-footer-logo mil-mb-60">
+                              <a href="#." class="mil-footer-logo mil-mb-60">
                                 <img src="img/Apel-ASSET-Logo.png" alt="Apel" width="20%">
                             </a>
+
+
+
+
+
+                            
+                        <div class="social-icons">
+                            <a href="https://facebook.com/ApelGroup" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://youtube.com/@ApelGroup" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://instagram.com/ApelGroup" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://tiktok.com/@ApelGroup" target="_blank"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://linkedin.com/company/ApelGroup" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/ApelGroup" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
                         </div>
                         <div class="col-xl-3 mil-mb-60">
                             <h6 class="mil-mb-60">Usefull Links</h6>
@@ -657,41 +843,130 @@ function toggleAccordion(header) {
 }
 </script>
 
-
-
 <script>
 
 
-let currentIndex = 0;
-const banners = document.querySelectorAll('.mil-banner2');
-const dots = document.querySelectorAll('.dot');
 
-function showSlide(index) {
-    banners.forEach((banner, i) => {
-        if (i === index) {
-            banner.classList.add('active');
-        } else {
-            banner.classList.remove('active');
-        }
-    });
+let slideIndex = 0;
+let autoSlideInterval;
+let isTransitioning = false;
+
+function showSlides(n) {
+    if (isTransitioning) return;
+    
+    const slides = document.getElementsByClassName("mil-banner2");
+    const dots = document.getElementsByClassName("dot");
+    
+    // Validate slide index
+    slideIndex = (n + slides.length) % slides.length;
+    
+    isTransitioning = true;
+    
+    // Fade out current slide
+    Array.from(slides).forEach(slide => slide.classList.remove('active'));
+    Array.from(dots).forEach(dot => dot.classList.remove('active'));
+    
+    // Fade in new slide after short delay
+    setTimeout(() => {
+        slides[slideIndex].classList.add('active');
+        dots[slideIndex].classList.add('active');
+        isTransitioning = false;
+    }, 50); // Short delay for smooth transition
+}
+
+function currentSlide(n) {
+    if (isTransitioning) return;
+    showSlides(n);
+    resetAutoSlide();
 }
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % banners.length;
-    showSlide(currentIndex);
+    if (isTransitioning) return;
+    showSlides(slideIndex + 1);
 }
 
-function currentSlide(index) {
-    currentIndex = index;
-    showSlide(currentIndex);
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    if (!document.querySelector('.mil-banner2-container:hover')) {
+        autoSlideInterval = setInterval(nextSlide, 10000);
+    }
 }
 
-// Show the first slide initially
-showSlide(currentIndex);
+// Initialize with transition
+document.addEventListener('DOMContentLoaded', function() {
+    showSlides(0);
+    resetAutoSlide();
+});
 
-// Change slides every 5 seconds (2 times in 10 seconds)
-setInterval(nextSlide, 5000);
+// Improved hover handling
+const bannerContainer = document.querySelector('.mil-banner2-container');
+
+bannerContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
+});
+
+bannerContainer.addEventListener('mouseleave', () => {
+    if (!isTransitioning) {
+        resetAutoSlide();
+    }
+});
+
+// Touch/swipe support for mobile
+let touchStartX = 0;
+
+bannerContainer.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    clearInterval(autoSlideInterval);
+});
+
+bannerContainer.addEventListener('touchend', e => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const swipeThreshold = 50;
+    
+    if (touchStartX - touchEndX > swipeThreshold) {
+        nextSlide();
+    } else if (touchEndX - touchStartX > swipeThreshold) {
+        showSlides(slideIndex - 1);
+    }
+    
+    resetAutoSlide();
+});
+
+
+
 </script>
+
+
+
+<script>
+    const video = document.getElementById('localVideo');
+    
+    function openVideo() {
+        document.getElementById('videoModal').style.display = 'flex';
+        video.play(); // Auto-play when opened
+    }
+    
+    function closeVideo() {
+        document.getElementById('videoModal').style.display = 'none';
+        // Reset video
+        video.pause();
+        video.currentTime = 0;
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('videoModal')) {
+            closeVideo();
+        }
+    }
+    
+    // Close with ESC key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeVideo();
+        }
+    });
+    </script>
     <!-- jquery js -->
     <script src="js/plugins/jquery.min.js"></script>
 
