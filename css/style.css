@@ -131,7 +131,7 @@ h1,
 }
 h1.mil-display,
 .h1.mil-display {
-  font-size: 80px;
+  font-size: 90px;
   line-height: 1.15;
 }
 @media screen and (max-width: 992px) {
@@ -521,8 +521,9 @@ buttons
 }
 .mil-btn.mil-md {
   padding: 0 30px;
-  height: 72px;
+  height: 52px;
   font-size: 16px;
+  border-radius: 0px;
 }
 @media screen and (max-width: 992px) {
   .mil-btn.mil-md {
@@ -2894,11 +2895,24 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
   color: white; /* Change text color for better contrast */
 }
 
+.mil-banner2:nth-child(1) {
+  background-image: url('/img/corporate-finance.jpg'); /* Set the background image */
+  color: white; /* Change text color for better contrast */
+}
+
+
+
+
 /* Adjust text and content positioning */
 .mil-banner2-text {
   position: relative; /* Position relative to allow overlay */
   z-index: 2; /* Ensure text is above the overlay */
 }
+
+
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 1200px) {

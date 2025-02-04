@@ -51,6 +51,7 @@
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         visibility: hidden;
         padding: 60px 0;
+       
 
         
     }
@@ -66,7 +67,7 @@
     display: flex;
     justify-content: center;
     z-index: 1000;
-}
+    
 
 .mil-navigation-dots .dot {
     cursor: pointer;
@@ -76,6 +77,8 @@
     background-color: rgba(105, 104, 104, 0.932);
     border-radius: 50%;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid;
+}
 }
 
 .mil-navigation-dots .dot.active {
@@ -143,6 +146,7 @@
         
         .mil-display2 {
             font-size: 2rem !important;
+
         }
         
         .mil-banner2-container { 
@@ -254,22 +258,26 @@
 
             <!-- banner -->
         <div class="mil-banner2-container">
-                <div class="mil-banner2 mil-dissolve active">
+               
+
+
+                <div class="mil-banner2 mil-dissolve" style="position: relative;">
+                    <div class="overlay"></div> <!-- Overlay for the background image -->
                     <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-xl-6 col-lg-6 col-md-12">
-                                <div class="mil-banner2-text">
-                                    <!-- <h6 class="mil-text-gradient-2 mil-mb-20">Enjoy Convenient Trading on Apel Alpha</h6> -->
-                                    <h1 class="mil-display mil-text-gradient-3 mil-mb-60">Trade Stocks with Ease</h1>
+                        <div class="row align-items-center" style="height: 100%;">
+                            <div class="col-xl-6 col-lg-6 col-md-12 offset-xl-3 offset-lg-3 offset-md-0">
+                                <div class="mil-banner2-text" style="padding-top: 100px;"> <!-- Adjust padding to move content down -->
+                                    <h6 class="mil-text-gradient-2 mil-mb-20b" style="color: #fff;"></h6>
+                                    <h2 class="mil-display2 mil-text-gradient-3 mil-mb-60" ><p class="mil-display2" style=" margin-top: 40px; color:#fff;">Trade Stocks</p><p class="mil-display2" style="color: #8abf42;"></p><p class="mil-display2" style=" color:#fff;">with ease </h2>
                                     <div class="mil-buttons-frame">
-                                        <a href="https://www.apelalpha.com/IW" class="mil-btn mil-md mil-add-arrow">Get Started</a>
-                                       
+                                        <a href="https://www.apelalpha.com" class="mil-btn mil-md mil-add-arrow" target="_blank">Get Started</a>
+                                        <!-- <a class="mil-btn mil-md mil-light video-btn "  onclick="openVideo()">Learn More</a> -->
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-12">
                                 <div class="mil-banner2-img">
-                                    <img src="img/ngozi2.png" alt="banner" style="max-width: 100%; height: auto;">
+                                   
                                 </div>
                             </div>
                         </div>
@@ -297,6 +305,11 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+                
                 <div class="mil-navigation-dots">
                     <span class="dot active" onclick="currentSlide(0)"></span>
                     <span class="dot" onclick="currentSlide(1)"></span>
@@ -311,7 +324,7 @@
                     <span class="close-btn" onclick="closeVideo()">&times;</span>
                     <video id="localVideo" controls>
                         <source src="img/investsmart.mp4" type="video/mp4">
-                        <source src="videos/my-video.webm" type="video/webm">
+                        <!-- <source src="videos/my-video.webm" type="video/webm"> -->
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -750,12 +763,12 @@
 
                             
                         <div class="social-icons">
-                            <a href="https://facebook.com/ApelGroup" target="_blank"><i class="fab fa-facebook"></i></a>
-                            <a href="https://youtube.com/@ApelGroup" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a href="https://instagram.com/ApelGroup" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://tiktok.com/@ApelGroup" target="_blank"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://linkedin.com/company/ApelGroup" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://twitter.com/ApelGroup" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://facebook.com/apelng" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://youtube.com/@apelng" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://instagram.com/apelng" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://tiktok.com/@apelng" target="_blank"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://linkedin.com/company/apelng" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/apelng" target="_blank"><i class="fab fa-twitter"></i></a>
                         </div>
                         </div>
                         <div class="col-xl-3 mil-mb-60">
@@ -888,7 +901,7 @@ function nextSlide() {
 function resetAutoSlide() {
     clearInterval(autoSlideInterval);
     if (!document.querySelector('.mil-banner2-container:hover')) {
-        autoSlideInterval = setInterval(nextSlide, 10000);
+        autoSlideInterval = setInterval(nextSlide, 5000);
     }
 }
 
@@ -899,11 +912,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Improved hover handling
-const bannerContainer = document.querySelector('.mil-banner2-container');
 
-bannerContainer.addEventListener('mouseenter', () => {
-    clearInterval(autoSlideInterval);
-});
 
 bannerContainer.addEventListener('mouseleave', () => {
     if (!isTransitioning) {
