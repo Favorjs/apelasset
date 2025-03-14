@@ -146,19 +146,19 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-9">
-                            <form>
+                            <form id="contactForm">
                                 <div class="row">
                                     <div class="col-md-6 mil-mb-30">
-                                        <input class="mil-input mil-up" type="text" placeholder="Name" name="name">
+                                        <input class="mil-input mil-up" type="text" placeholder="Name" name="name" required>
                                     </div>
                                     <div class="col-md-6 mil-mb-30">
                                         <input class="mil-input mil-up" type="email" placeholder="Email" name="email">
                                     </div>
                                     <div class="col-xl-12 mil-mb-30">
-                                        <input class="mil-input mil-up" type="tel" placeholder="Telephone number" name="tel">
+                                        <input class="mil-input mil-up" type="tel" placeholder="Telephone number" name="phone" required>
                                     </div>
                                     <div class="col-xl-12 mil-mb-30 ">
-                                        <textarea cols="30" rows="10" class="mil-up" placeholder="Message" name="message"></textarea>
+                                        <textarea cols="30" rows="10" class="mil-up" placeholder="Message" name="message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="mil-checkbox-frame mil-mb-30 mil-up">
@@ -169,11 +169,13 @@
                                     <p class="mil-text-xs mil-soft">I agree that the data submitted, collected and stored *</p>
                                 </div>
                                 <div class="mil-up">
-                                    <button type="submit" class="mil-btn mil-m">Send Message</button>
+                                    <button type="submit" class="mil-btn mil-m" style="cursor:pointer">Send Message</button>
                                 </div>
                             </form>
-                            <div class="alert-success" style="display: none;"><h5>Thanks, your message is sent successfully.</h5></div>
-                            
+                            <div class="alert-success" style="display: none; background: #d4edda; color: #155724; padding: 15px; border-radius: 4px; margin-top: 20px;">
+                                <h5 style="margin: 0;">Thanks, your message is sent successfully.</h5>
+                            </div>
+            
                         </div>
                     </div>
                 </div>
@@ -298,6 +300,47 @@
     <!-- wrapper end -->
 
     <!-- jquery js -->
+
+
+    
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const form = e.target;
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value
+        };
+    
+        const alertDiv = document.querySelector('.alert-success');
+        
+        try {
+            const response = await fetch('http://localhost:3001/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+    
+            if (response.ok) {
+                form.reset();
+                alertDiv.style.display = 'block';
+                setTimeout(() => {
+                    alertDiv.style.display = 'none';
+                }, 5000);
+            } else {
+                alert('Error sending message');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error sending message');
+        }
+    });
+    </script>
     <script src="js/plugins/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 

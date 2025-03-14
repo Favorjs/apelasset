@@ -119,7 +119,7 @@ h6 span,
 .h4 span,
 .h5 span,
 .h6 span {
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Switzer-Variable";
   line-height: 1.3;
   letter-spacing: -0.04em;
@@ -127,11 +127,11 @@ h6 span,
 
 h1,
 .h1 {
-  font-size: 77px;
+  font-size: 67px;
 }
 h1.mil-display,
 .h1.mil-display {
-  font-size: 90px;
+  font-size: 60px;
   line-height: 1.15;
 }
 @media screen and (max-width: 992px) {
@@ -147,7 +147,7 @@ h1.mil-display,
 
 h2,
 .h2 {
-  font-size: 57px;
+  font-size: 45px;
 }
 @media screen and (max-width: 992px) {
   h2,
@@ -194,7 +194,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 77px;
+  font-size: 67px;
 }
 
 @media screen and (max-width: 992px) {
@@ -749,6 +749,7 @@ space
 
 .mil-mb-30 {
   margin-bottom: 30px;
+
 }
 
 .mil-mb-40 {
@@ -880,6 +881,7 @@ space
 .mil-p-160-130 {
   padding-top: 160px;
   padding-bottom: 130px;
+ 
 }
 @media (max-width: 1200px) {
   .mil-p-160-130 {
